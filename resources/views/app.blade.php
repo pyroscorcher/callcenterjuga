@@ -43,5 +43,9 @@
     </head>
     <body class="font-sans antialiased">
         <x-inertia::app />
+
+        <div>
+            <h1>test workflow</h1>
+        </div>
     </body>
 </html>
