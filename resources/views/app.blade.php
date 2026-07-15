@@ -42,7 +42,7 @@
         </x-inertia::head>
     </head>
     <body class="font-sans antialiased">
-        <x-inertia::app />
+        <x-inertia::app /> 
 
         <div>
             <h1>test workflow</h1>
