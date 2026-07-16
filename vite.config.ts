@@ -31,4 +31,9 @@ export default defineConfig({
             formVariants: true,
         }),
     ],
+    resolve: {
+        alias: {
+            '@': '/resources/js', // 👈 Pastikan baris ini ada!
+        },
+    },
 });

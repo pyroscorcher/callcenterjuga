@@ -5,27 +5,31 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { useCurrentUrl } from '@/composables/useCurrentUrl';
 import { toUrl } from '@/lib/utils';
-import { edit as editAppearance } from '@/routes/appearance';
-import { edit as editProfile } from '@/routes/profile';
-import { edit as editSecurity } from '@/routes/security';
 import type { NavItem } from '@/types';
 
+// 1. Impor ikon yang ingin digunakan (biasanya menggunakan lucide-vue-next)
+import { User, Lock, Palette, Shield } from 'lucide-vue-next';
+
+const { isCurrentOrParentUrl } = useCurrentUrl();
+
+// 2. Definisikan array sidebarNavItems di sini
 const sidebarNavItems: NavItem[] = [
     {
         title: 'Profile',
-        href: editProfile(),
+        href: '/settings/profile', // Sesuaikan dengan route Laravel Anda
+        icon: User,
     },
     {
         title: 'Security',
-        href: editSecurity(),
+        href: '/settings/security', // Sesuaikan dengan route Laravel Anda
+        icon: Lock,
     },
     {
         title: 'Appearance',
-        href: editAppearance(),
+        href: '/settings/appearance', // Sesuaikan dengan route Laravel Anda
+        icon: Palette,
     },
 ];
-
-const { isCurrentOrParentUrl } = useCurrentUrl();
 </script>
 
 <template>
@@ -52,7 +56,7 @@ const { isCurrentOrParentUrl } = useCurrentUrl();
                         as-child
                     >
                         <Link :href="item.href">
-                            <component :is="item.icon" class="h-4 w-4" />
+                            <component :is="item.icon" class="h-4 w-4 mr-2" />
                             {{ item.title }}
                         </Link>
                     </Button>

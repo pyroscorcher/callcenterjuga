@@ -42,6 +42,7 @@
         "clsx": "^2.1.1",
         "laravel-vite-plugin": "^3.0.0",
         "leaflet": "^1.9.4",
+        "lucide-vue-next": "^1.0.0",
         "reka-ui": "^2.9.8",
         "shpjs": "^6.2.0",
         "tailwind-merge": "^3.2.0",
