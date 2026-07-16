@@ -43,6 +43,7 @@
         "laravel-vite-plugin": "^3.0.0",
         "leaflet": "^1.9.4",
         "reka-ui": "^2.9.8",
+        "shpjs": "^6.2.0",
         "tailwind-merge": "^3.2.0",
         "tailwindcss": "^4.1.1",
         "tw-animate-css": "^1.2.5",

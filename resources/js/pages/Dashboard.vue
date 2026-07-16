@@ -2,6 +2,7 @@
 import { Head } from '@inertiajs/vue3';
 import PlaceholderPattern from '@/components/PlaceholderPattern.vue';
 import { dashboard } from '@/routes';
+import RiverBasinMap from '@/components/RiverBasinMap.vue';
 
 defineOptions({
     layout: {
@@ -13,10 +14,15 @@ defineOptions({
         ],
     },
 });
+
 </script>
 
 <template>
     <Head title="Dashboard" />
+    <div class="p-6">
+        <h1 class="text-2xl font-bold mb-4">Indonesia River Basin Map</h1>
+        <RiverBasinMap />
+    </div>
 
     <div
         class="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4"
