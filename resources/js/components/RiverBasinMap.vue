@@ -33,7 +33,17 @@ onMounted(async () => {
 
   try {
     // Load shapefile ZIP
-    const geojson = await shp('/shapefile/Batas_DAS_KLHK.zip')
+  const response = await fetch('/shapefile/Batas_DAS_KLHK.zip')
+
+  console.log('Status:', response.status)
+
+  const buffer = await response.arrayBuffer()
+
+  console.log('Buffer size:', buffer.byteLength)
+
+  const geojson = await shp(buffer)
+
+  console.log(geojson)
 
     // Add river basin layer
     const layer = L.geoJSON(geojson, {
